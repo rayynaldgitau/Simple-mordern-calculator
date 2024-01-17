@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>   
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js" defer></script>
+</head>
+<body class="bg-brown-500">
+    <!-- calculator grid -->
+    <div class="grid justify-center content-center min-h-screen" style="grid-template-columns: repeat(4, 100px); grid-template-rows: minmax(120px, auto) repeat(5, 100px);">
+        <!-- calculator output -->
+        <div style="grid-column: 1/-1; padding: 10px; word-wrap: break-word; word-break: break-all;" class="bg-slate-400 flex items-end justify-around flex-col ">
+            <div data-previous style="font-size: 1.5rem; color:rgba(255, 255, 255, .75) ;"></div>
+            <div data-current style="color: white; font-size: 2.5rem;" ></div>
+        </div>
+        <!-- calculator buttons -->
+        <!-- used data instead of class to not confuse css and js  -->
+        <button data-clear-all class="cursor-pointer text-lg border outline-none bg-indigo-400 hover:bg-orange-300" style="grid-column: span 2;">AC</button>
+        <button data-delete class="cursor-pointer text-lg border outline-none bg-indigo-400 hover:bg-red-300 ">DEL</button>
+        <button data-operation class="cursor-pointer text-lg border outline-none bg-indigo-400 hover:bg-violet-100 ">÷</button>
+        <button data-number class="cursor-pointer text-lg border outline-none bg-indigo-400 hover:bg-violet-100 ">1</button>
+        <button data-number class="cursor-pointer text-lg border outline-none bg-indigo-400 hover:bg-violet-100 ">2</button>
+        <button data-number class="cursor-pointer text-lg border outline-none bg-indigo-400 hover:bg-violet-100 ">3</button>
+        <button data-operation class="cursor-pointer text-lg border outline-none bg-indigo-400 hover:bg-violet-100 ">*</button>
+        <button data-number class="cursor-pointer text-lg border outline-none bg-indigo-400 hover:bg-violet-100 ">4</button>
+        <button data-number class="cursor-pointer text-lg border outline-none bg-indigo-400 hover:bg-violet-100 ">5</button>
+        <button data-number class="cursor-pointer text-lg border outline-none bg-indigo-400 hover:bg-violet-100 ">6</button>
+        <button data-operation class="cursor-pointer text-lg border outline-none bg-indigo-400 hover:bg-violet-100 ">+</button>
+        <button data-number class="cursor-pointer text-lg border outline-none bg-indigo-400 hover:bg-violet-100 ">7</button>
+        <button data-number class="cursor-pointer text-lg border outline-none bg-indigo-400 hover:bg-violet-100 ">8</button>
+        <button data-number class="cursor-pointer text-lg border outline-none bg-indigo-400 hover:bg-violet-100 ">9</button>
+        <button data-operation class="cursor-pointer text-lg border outline-none bg-indigo-400 hover:bg-violet-100 ">-</button>
+        <button data-number class="cursor-pointer text-lg border outline-none bg-indigo-400 hover:bg-violet-100 ">.</button>
+        <button data-number class="cursor-pointer text-lg border outline-none bg-indigo-400 hover:bg-violet-100 ">0</button>
+        <button data-equals class="cursor-pointer text-lg border outline-none bg-indigo-400 hover:bg-green-300" style="grid-column: span 2;">=</button>
+    </div>
+</body>
+</html>
